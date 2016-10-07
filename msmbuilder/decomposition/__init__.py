@@ -6,6 +6,7 @@ from .base import MultiSequenceDecompositionMixin
 from .ktica import KernelTICA
 from .pca import PCA, SparsePCA, MiniBatchSparsePCA
 from .sparsetica import SparseTICA
+from .one_sparse_tica import OneSparseTICA
 from .tica import tICA
 
 
