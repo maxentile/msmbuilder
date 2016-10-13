@@ -112,7 +112,7 @@ class KSparseTICA(tICA):
         Journal of Machine Learning Research. Vol. 14. 2013.
         http://www.jmlr.org/papers/volume14/yuan13a/yuan13a.pdf
     .. [2] McGibbon, R. T. and Pande, V.S. "Identification of simple reaction
-        coordinates from complex dynamics." arXiv:1602.08776 [cond-mat.state-mech]
+        coordinates from complex dynamics." arXiv:1602.08776 [cond-mat.stat-mech]
         2016. https://arxiv.org/abs/1602.08776
     .. [3] Mackey, L. "Deflation Methods for Sparse PCA." NIPS. Vol. 21. 2008.
         http://web.stanford.edu/~lmackey/papers/deflation-nips08.pdf
