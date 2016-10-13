@@ -38,4 +38,4 @@ def test_MetEnkephalin():
     tica = tICA()
     _ = kstica.fit_transform(data)
     _ = tica.fit_transform(data)
-    np.testing.assert_allclose(kstica.eigenvalues_, tica.eigenvalues_)
+    np.testing.assert_array_almost_equal(kstica.eigenvalues_, tica.eigenvalues_)
