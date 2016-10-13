@@ -27,17 +27,18 @@ def test_MetEnkephalin():
     _ = kstica.fit_transform(data)
     assert (np.sum(kstica.components_ != 0) == 1)
 
-    # check whether this recovers >1 eigenpair without error
-    kstica = KSparseTICA(n_components=2)
-    _ = kstica.fit_transform(data)
+    ## check whether this recovers >1 eigenpair without error
+    #kstica = KSparseTICA(n_components=2)
+    #_ = kstica.fit_transform(data)
 
-    # check whether this recovers all eigenpairs without error
-    kstica = KSparseTICA()
-    _ = kstica.fit_transform(data)
+    ## check whether this recovers all eigenpairs without error
+    #kstica = KSparseTICA()
+    #_ = kstica.fit_transform(data)
 
     # check whether we recover the same solution as standard tICA when k = n_features
-    kstica = KSparseTICA(k=n_features)
-    tica = tICA()
+    n_components = 10
+    kstica = KSparseTICA(n_components=n_components, k=n_features)
+    tica = tICA(n_components=n_components)
     _ = kstica.fit_transform(data)
     _ = tica.fit_transform(data)
     np.testing.assert_array_almost_equal(kstica.eigenvalues_, tica.eigenvalues_)
