@@ -25,6 +25,7 @@ def test_MetEnkephalin():
     # check whether this recovers a single 1-sparse eigenpair without error
     kstica = KSparseTICA(n_components=1, k = 1)
     _ = kstica.fit_transform(data)
+    assert (np.sum(kstica.components_ != 0) == 1)
 
     # check whether this recovers >1 eigenpair without error
     kstica = KSparseTICA(n_components=2)
