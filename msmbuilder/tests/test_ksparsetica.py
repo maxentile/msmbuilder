@@ -18,6 +18,7 @@ def build_dataset():
     return AtomPairsFeaturizer(pairs[:n_pairs]).transform([traj[::10] for traj in trajs])
 
 def test_MetEnkephalin():
+    np.random.seed(0)
     data = build_dataset()
     n_features = data[0].shape[1]
 
