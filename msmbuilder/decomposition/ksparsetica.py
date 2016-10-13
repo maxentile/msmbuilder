@@ -154,7 +154,11 @@ class KSparseTICA(tICA):
         return xts[-1]
 
     def _solve(self):
-        if not self._is_dirty: return
+
+        # allow to reduce n_components without re-fitting
+        if not self._is_dirty:
+            if len(self._eigenvalues_) >= self.n_components:
+                return
 
         # initialize
         A, B = self.offset_correlation_, self.covariance_
