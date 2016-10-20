@@ -8,7 +8,8 @@ __all__ = ['KSparseTICA']
 
 
 class KSparseTICA(tICA):
-    """
+    """Sparse tICA where eigenvectors must have k or fewer nonzero values.
+
     A special case of approximate time-structure Independent Component Analysis (tICA),
     where each approximate eigenvector is required to have k or fewer nonzero values.
 
