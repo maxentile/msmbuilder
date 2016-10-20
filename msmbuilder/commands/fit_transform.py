@@ -338,3 +338,4 @@ class KSparseTICACommand(FitTransformCommand):
     _concrete = True
     _group = '3-Decomposition'
     _transformed_fmt = 'hdf5'
+ 
